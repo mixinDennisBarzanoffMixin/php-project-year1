@@ -1,58 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 
 :root {
     --book-padding: 0.5em;
+    font-size: 12px;
+    font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     background-color: #F9EBC8;
-    font-size: 12px;
-    font-family: 'Mulish';
-    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    display: flex;
+    
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.main .main__left {
+    flex-grow: 1;
+}
+
+.main .main__right {
+    flex-grow: 1;
 }
 
 .books {
     display: flex;
-    flex-direction: column;
-    gap: 2em;
-    padding: 3em;
+    gap: 2rem;
+    padding: 3rem;
 }
 
 .book-card {
     background-color: #FFFBDE;
-    padding: 2em;
-    height: 30vh;
+    padding: 2rem;
+    height: 20rem;
+    min-width: 40rem;
+    max-width: 60rem;
 
     display: grid; 
-    grid-template-columns: minmax(3rem, 1fr) 3fr 5.5em 8em 8em; 
+    grid-template-columns: minmax(10rem, 1fr) 3fr 5.5rem 8rem 8rem; 
     grid-template-rows: 0.8fr 0.9fr 2fr 1fr; 
-    gap: 0px 1em; 
+    gap: 0px 1rem; 
     grid-template-areas: 
     "b t t t t"
     "b g g g g"
     "b d d d d"
     "b . . b1 b2"; 
 
-    border-radius: 3em;
+    border-radius: 3rem;
 }
 
 .book-card .book-card__image {
     grid-area: b;
     justify-self: center;
-    /* background-color: red; */
+    /* align-self: center; */
 }
 .book-card .book-card__image > img {
     object-fit: contain;
     aspect-ratio: 6/9;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     width: 100%;
     max-height: 100%;
 }
 
 .book-card .book-card__title {
-    font-family: 'Mulish';
-    font-size: 2em;
+    font-family: 'Mulish', sans-serif;
+    font-size: 2rem;
     grid-area: t;
 }
 
@@ -71,4 +92,38 @@ body {
 }
 .book-card .book-card__button-two {
     grid-area: b2;
+}
+
+.button {
+    border-radius: calc(4em/12);
+    background-color: #5C6D71;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    padding: 1rem;
+    height: 3rem;
+    border: none;
+
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button > .button__text {
+    flex-grow: 1;
+}
+
+
+.button:hover {
+    background-color: #5c767c;
+}
+
+.button:active {
+    background-color: #505d5f;
+}
+
+.icon--small {
+    font-size: 1rem;
 }
