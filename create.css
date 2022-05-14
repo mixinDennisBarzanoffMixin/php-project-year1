@@ -1,0 +1,26 @@
+label {
+    display: flex;
+    flex-flow: column;
+}
+
+input {
+    height: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #5c767c;
+}
+
+#create-form {
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+
+    gap: 1rem;
+    min-height: 40rem;
+    width: 40rem;
+}
+
+#create-form textarea {
+    max-width: 40rem;
+    min-height: 10rem;
+}

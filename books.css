@@ -1,31 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
-
-:root {
-    --book-padding: 0.5em;
-    font-size: 12px;
-    font-family: 'Mulish', sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background-color: #F9EBC8;
-}
 
 .main {
     display: flex;
-    display: flex;
+    padding: 3rem;
+    gap: 1rem;
     
-    -webkit-justify-content: space-around;
+    /* -webkit-justify-content: space-around;
     justify-content: space-around;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: stretch;
-    align-items: stretch;
+    -webkit-flex-flow: row wrap; */
+    /* flex-flow: row wrap; */
+    /* -webkit-align-items: stretch; */
+    /* align-items: stretch; */
 }
 
 .main .main__left {
-    flex-grow: 1;
+    width: 80vw;
 }
 
 .main .main__right {
@@ -34,8 +22,9 @@ body {
 
 .books {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 2rem;
-    padding: 3rem;
 }
 
 .book-card {
@@ -94,35 +83,7 @@ body {
     grid-area: b2;
 }
 
-.button {
-    border-radius: calc(4em/12);
-    background-color: #5C6D71;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
-    padding: 1rem;
-    height: 3rem;
-    border: none;
 
-    font-family: 'Mulish', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button > .button__text {
-    flex-grow: 1;
-}
-
-
-.button:hover {
-    background-color: #5c767c;
-}
-
-.button:active {
-    background-color: #505d5f;
-}
 
 .icon--small {
     font-size: 1rem;
