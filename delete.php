@@ -10,8 +10,8 @@
     require 'server.php';
 
 
-    $stmt = $conn->prepare('delete from books where isbn_id = '.$isbn.'');
-    $result = $stmt->execute();
+    $stmt = $conn->prepare('delete from books where isbn_id = ?');
+    $result = $stmt->execute([$isbn]);
 
 
     if ($result === TRUE) {

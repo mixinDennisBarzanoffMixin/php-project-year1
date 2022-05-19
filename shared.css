@@ -23,7 +23,7 @@ a {
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
-    padding: 1rem;
+    padding: 0.2rem;
     height: 3rem;
     border: none;
 
@@ -44,4 +44,19 @@ a {
 
 .button:active {
     background-color: #505d5f;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100vw;
+    height: 4rem;
+    background-color: #ddd1b1;
+}
+.avatar {
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
 }

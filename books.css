@@ -39,7 +39,7 @@
     grid-template-rows: 0.8fr 0.9fr 2fr 1fr; 
     gap: 0px 1rem; 
     grid-template-areas: 
-    "b t t t t"
+    "b t t t r"
     "b g g g g"
     "b d d d d"
     "b . . b1 b2"; 
@@ -81,6 +81,18 @@
 }
 .book-card .book-card__button-two {
     grid-area: b2;
+}
+
+.book-card .bookmark {
+    grid: r;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+.book-card .bookmark .selected {
+    color: red;
 }
 
 

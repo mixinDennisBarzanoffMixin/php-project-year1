@@ -16,8 +16,8 @@
             $genre = $_POST['genre'];
         
         if (isValidName($name) && isValidUrl($url) && isValidDescription($description) && isValidGenre($genre)){
-            $stmt = $conn->prepare('insert into books (isbn_id, title, link, summary, genre) values (null, "'.$name.'", "'.$url.'", "'.$description.'", "'.$genre.'")');
-            $result = $stmt->execute();
+            $stmt = $conn->prepare('insert into books (isbn_id, title, link, summary, genre) values (null, ?, ?, ?, ?)');
+            $result = $stmt->execute(array($name, $url, $description, $genre));
 
 
             if ($result === TRUE) {
